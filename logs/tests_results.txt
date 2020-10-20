@@ -1,0 +1,44 @@
+test_color_name_to_hex (__main__.TestExercice) ... ok
+test_list_to_dict (__main__.TestExercice) ... ok
+test_odd_integer_for_loop (__main__.TestExercice) ... ok
+test_odd_integer_list_comprehension (__main__.TestExercice) ... FAIL
+test_word_dict_comprehension (__main__.TestExercice) ... ERROR
+test_word_dict_for_loop (__main__.TestExercice) ... ERROR
+
+======================================================================
+ERROR: test_word_dict_comprehension (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 77, in test_word_dict_comprehension
+    output = exercice.word_dict_comprehension(words)
+TypeError: word_dict_comprehension() takes 0 positional arguments but 1 was given
+
+======================================================================
+ERROR: test_word_dict_for_loop (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 66, in test_word_dict_for_loop
+    output = exercice.word_dict_for_loop(words)
+TypeError: word_dict_for_loop() takes 0 positional arguments but 1 was given
+
+======================================================================
+FAIL: test_odd_integer_list_comprehension (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 61, in test_odd_integer_list_comprehension
+    'Mauvaise reponse'
+AssertionError: Lists differ: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25] != [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+
+First list contains 1 additional elements.
+First extra element 12:
+25
+
+- [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+?                                           ----
+
++ [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23] : Mauvaise reponse
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=1, errors=2)
