@@ -7,36 +7,65 @@ from matplotlib.colors import cnames
 
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
-    return {}
+    new_dict = {}
+    for i in some_list:
+        new_dict[i] = some_list.index(i)
+    return new_dict
 
 
 def color_name_to_hex(colors: list) -> list:
     # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
-    return []
+   
+    #solution avec liste 
+    coloursHex = []
+    for color in colors :
+        coloursHex.append((color,cnames[color]))
+    return coloursHex
+
+    #solution avec comprehension de liste
+    return[(color, cnames[color])for color in colors]
+
 
 
 def odd_integer_for_loop(end: int) -> list:
-    return []
-
+    #utilisation d'une loop 
+    odd_numbers = []
+    for number in range (end+1):
+        if number % 2 == 1 :
+            odd_numbers.append(number)
+    return odd_numbers
 
 def odd_integer_list_comprehension(end: int) -> list:
-    return []
+    return [num for num in range(end+1) if num % 2 ==1]
 
 
 def loop_traversal(integers: list) -> None:
-    pass
+    #Parcourir la liste obtenue en a) ou en b) et afficher les éléments ainsi que leur index, 
+    #sans déclarer de variable à l'extérieur de la boucle.
+    for index, banane in enumerate(integers):
+        print(index, banane)
+    
+    #remarque : pas de return, car ne reoutnre rien
+    # la fonction enumerate retourne un tuple 
 
 
 def word_dict_for_loop() -> dict:
-    return {}
+    new_dict = {}
+    for word in words :
+        new_dict[word[0].upper()] = word
+    return new_dict
 
 
 def word_dict_comprehension() -> dict:
-    return {}
+    return {word[0].upper():word for word in words}
 
 
 def dictionary_traversal(words: dict) -> None:
-    pass
+    # deux manières 
+
+    for index, key in enumerate(sorted(words.keys())):
+        print(index,key, words[key])
+
 
 
 def main() -> None:
